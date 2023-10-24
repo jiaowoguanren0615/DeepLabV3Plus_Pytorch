@@ -8,7 +8,7 @@ Download VOC and CityScapes：
 提取码：0grl 
 --来自百度网盘超级会员V3的分享
 
-Note: Before training the model, you need to enter the ___train_gpu.py___ file to modify the path and batchsize of your own data set. If you enable automatic mixed precision and then load the weight file under the checkpoints file, you may encounter a ComplexFloat error during the forward process. (If you know how to solve this problem, you are welcome to suggest a solution, thank you very much!)
+Note: Before training the model, you need to enter the ___train_gpu.py___ file to modify the path and batchsize of your own data set. If you enable automatic mixed precision and then load the weight file under the checkpoints file, you may(sometimes) encounter a ComplexFloat error during the forward process. (If you know how to solve this problem, you are welcome to suggest a solution, thank you very much!)
 
 ## TRAIN & EVALUATE MODELS
 1. cd DeepLabV3Plus
