@@ -24,7 +24,7 @@ def get_argparser():
     parser = argparse.ArgumentParser('Pytorch Segmentation Models training and evaluation script', add_help=False)
 
     # Datset Options
-    parser.add_argument("--data_root", type=str, default='/usr/local/Huangshuqi/ImageData/CityScapesDataset',help="path to Dataset")
+    parser.add_argument("--data_root", type=str, default='./CityScapesDataset',help="path to Dataset")
     parser.add_argument("--dataset", type=str, default='cityscapes',choices=['voc', 'cityscapes'], help='Name of dataset')
     parser.add_argument("--num_classes", type=int, default=None,help="num classes (default: None)")
     parser.add_argument("--batch_size", type=int, default=16,help='batch size (default: 16)') # consume approximately 12.8G GPU-Memory (use_amp is False)
@@ -59,7 +59,7 @@ def get_argparser():
                         help='crop validation (default: False)')
     parser.add_argument("--crop_size", type=int, default=513)
 
-    parser.add_argument("--ckpt", default='./pretrained_weights/best_deeplabv3plus_mobilenet_cityscapes_os16.pth', type=str,
+    parser.add_argument("--ckpt", default='', type=str,
                         help="restore from checkpoint")
     parser.add_argument("--continue_training", action='store_true', default=True)
 
