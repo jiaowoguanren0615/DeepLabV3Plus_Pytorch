@@ -227,7 +227,7 @@ def main(opts):
     def save_ckpt(path):
         checkpoint_save = {
             "cur_itrs": cur_itrs,
-            "model_state": model.module.state_dict(),
+            "model_state": model.state_dict(),
             "optimizer_state": optimizer.state_dict(),
             "scheduler_state": lr_scheduler.state_dict(),
             "best_score": best_score,
